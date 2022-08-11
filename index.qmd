@@ -1,0 +1,7 @@
+---
+title: "Testando o actions para quarto :)"
+format: revealjs
+editor: visual
+---
+
+`r Sys.time()`
