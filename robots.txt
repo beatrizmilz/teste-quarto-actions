@@ -1,0 +1,1 @@
+Sitemap: https://github.com/beatrizmilz/teste-quarto-actions/sitemap.xml
