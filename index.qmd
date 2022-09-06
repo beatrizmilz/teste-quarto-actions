@@ -4,4 +4,27 @@ format: revealjs
 editor: visual
 ---
 
+## Foto de gato da vez!
+
+
 `r Sys.time()`
+
+```{r}
+gerar_gatito <- function() {
+  tmp <- tempfile(fileext = ".jpeg")
+  utils::download.file(
+    "https://cataas.com/cat",
+    tmp,
+    quiet = TRUE
+  )
+  tmp |> 
+    jpeg::readJPEG()  |> 
+    grDevices::as.raster()  |> 
+    graphics::plot()
+}
+```
+
+
+```{r gatito}
+gerar_gatito()
+```
