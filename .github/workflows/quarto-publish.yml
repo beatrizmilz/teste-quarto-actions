@@ -28,10 +28,7 @@ jobs:
         with:
           packages: |
             any::rmarkdown
-            any::utils
             any::jpeg
-            any::grDevices
-            any::graphics
 
       - name: Publish to GitHub Pages (and render)
         uses: quarto-dev/quarto-actions/publish@v2
