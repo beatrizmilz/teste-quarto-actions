@@ -7,9 +7,9 @@
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.0.38">
+  <meta name="generator" content="quarto-1.1.189">
 
-  <title>teste2 - Testando o actions para quarto :)</title>
+  <title>Testando o actions para quarto :)</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -18,10 +18,15 @@
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
-    span.underline{text-decoration: underline;}
-    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
   </style>
   <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto.css" id="theme">
   <link href="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -321,11 +326,15 @@
   <h1 class="title">Testando o actions para quarto :)</h1>
 </section>
 
-<section class="slide level2">
+<section id="foto-de-gato-da-vez" class="slide level2">
+<h2>Foto de gato da vez!</h2>
+<p>2022-09-06 21:43:04</p>
+<div class="cell">
 
-<p>2022-08-13 18:43:22</p>
+</div>
 
-<div class="footer footer-default">
+
+<img data-src="index_files/figure-revealjs/gatito-1.png" width="960" class="r-stretch"><div class="footer footer-default">
 
 </div>
 </section>
@@ -650,7 +659,8 @@
       for (var i=0; i<noterefs.length; i++) {
         const ref = noterefs[i];
         tippyHover(ref, function() {
-          let href = ref.getAttribute('href');
+          // use id or data attribute instead here
+          let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
           try { href = new URL(href).hash; } catch {}
           const id = href.replace(/^#\/?/, "");
           const note = window.document.getElementById(id);
